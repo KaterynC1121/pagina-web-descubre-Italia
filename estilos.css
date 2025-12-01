@@ -1,0 +1,473 @@
+/* Estilos generales: Afectan a toda la página (Body) */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    /* RUTA CORREGIDA: Eliminada la barra / para que funcione localmente */
+    background-image: url("imagenes/italia.png"); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-color: #f0f0f0;
+}
+
+/* Estilos para la cabecera (Header): Navegación y logo */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;/* ¡AQUÍ: Cambia el color de fondo de la barra de navegación! */
+    color: #fff;
+} 
+
+header .logo img {
+    max-width: 100%;
+}
+
+header nav ul {
+    list-style: none; /* Elimina viñetas de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    padding: 40px;
+}
+/* Estilos específicos de los enlaces de navegación por color */
+header nav ul li a.destinos {
+    color: #d90416;
+    font-weight: bold;
+}
+
+/* CLASE CORREGIDA: Cambié 'cultura' a 'cultural' para que coincida con el HTML */
+header nav ul li a.cultural {
+    color: #067302;
+    font-weight: bold;
+}
+
+header nav ul li a.gastronomia {
+    color: #000;
+    font-weight: bold;
+}
+
+header .idioma select {
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+/* Estilos del banner principal (primera sección grande) */
+.banner {
+    /* RUTA CORREGIDA: Eliminada la barra / para que funcione localmente */
+    background-image: url("imagenes/italia.png");/* Fondo del banner */
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.banner .btn {
+    margin-top: 50px;
+    background-position: center;
+    display: inline-block;
+    background-color: #e62b13;/* Color de fondo del botón del banner */
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.banner-content {
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+.banner .btn:hover {
+    background-color: #c92215;
+}
+
+/* Contenedor de las tarjetas (Card Grid) */
+.card-grid-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; 
+    padding: 20px;
+}
+
+/* Estilo de cada tarjeta individual */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.85);/* Sombra de la tarjeta */
+    overflow: hidden; 
+    width: 250px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h2 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.card-content p {
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.4;
+}
+
+.btn-card {
+    display: inline-block;
+    background-color: #e62b1e;/* Color de fondo del botón de la tarjeta */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-card:hover {
+    background-color: #c92215;
+}
+
+/* Estilo para la sección de abajo (Botón de 'Más información') */
+.more-info-container {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: transparent;
+    margin-top: 20px;
+}
+
+.btn-more-info {
+    display: inline-block;
+    background-color: #e62b1e;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-more-info:hover {
+    background-color: #c92215;
+}
+
+/* Estilos para las páginas de Destinos y Cultura */
+.single-image-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.single-image-section img {
+    max-width: 600px; 
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(7, 100, 10, 0.1);
+    margin: 20px 0;
+}
+/* color y  transparencia del fondo de la ventana! */
+.text-and-gallery {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(240, 240, 240, 0.9); 
+    border-radius: 15px; /* Bordes redondeados de la ventana */
+    margin: -35px auto 30px;
+    max-width: 900px;
+}
+
+.text-and-gallery p {
+    color: #000; /* Cambié el color a blanco para que se vea */
+    text-shadow: 1px 1px 2px #000000;
+    line-height: 1.6; 
+}
+
+.two-image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+    flex-wrap: wrap; 
+    margin-top: 20px;
+}
+.two-image-gallery img {
+    max-width: 450px; 
+    width: 45%; 
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(246, 245, 245, 0.1);
+}
+
+h1 {
+    color: #000; 
+    text-shadow: 2px 2px 4px #000000; 
+}
+
+h2 {
+    color: #067302;
+    text-shadow: 1px 1px 2px #000000;
+}
+/* Estilo del pie de página */
+footer {
+    background-color: #0047b3; 
+    color: white; /* Color del texto del copyright */
+    padding: 20px 0; /* Agrega espacio arriba y abajo */
+}
+
+/* Contenedor que alinea todo el contenido del footer */
+.footer-content {
+    display: flex; /* La clave para alinear los elementos en una fila */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; 
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si la pantalla es muy pequeña */
+    gap: 20px; /* Agrega espacio entre los íconos y el texto */
+}
+
+/* Contenedor de los iconos de redes sociales */
+.social-icons {
+    display: flex; 
+    justify-content: center;
+    gap: 15px; 
+}
+
+/* Estilo de los iconos de redes sociales */
+.social-icons img {
+    width: 35px; /* Tamaño de los iconos */
+    height: 35px;
+}
+/* Media Query para dispositivos pequeños (ancho máximo de 768px)*/
+@media screen and (max-width: 768px) {
+    
+    /* Ocultar o apilar el menú para que no rompa el diseño */
+    header nav ul {
+        flex-direction: column; /* Apila los elementos del menú verticalmente */
+        align-items: center; /* Centra los elementos */
+        width: 100%;
+        display: none; 
+    }
+
+    /* 2. Reducir el padding del header */
+    header {
+        padding: 10px;
+    }
+
+    /* 3. Ajustar el tamaño del texto principal para que quepa */
+    .banner-content {
+        font-size: 2.5em; /* Reduce el tamaño de la letra del título */
+    }
+
+    /* 4. Reducir la altura del banner */
+    .banner {
+        height: 400px;
+    }
+}
+/* Media Query para dispositivos muy pequeños ( ancho máximo de 600px) */
+@media screen and (max-width: 600px) {
+    
+    /*Tarjetas: Hacer que ocupen todo el ancho disponible */
+    .card {
+        width: 90%; /* Hace que cada tarjeta ocupe casi todo el ancho del móvil */
+        max-width: none;
+    }
+
+    /* Galería: Apilar las dos imágenes una sobre la otra */
+    .two-image-gallery img {
+        width: 90%; /* Hace que cada imagen ocupe casi todo el ancho */
+    }
+}
+/* Estilos para que el submenú INICIE OCULTO Y SE POSICIONE BIEN */
+.submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    /* propiedad para el fondo del menu desplegable*/
+    background-color: #555;
+
+    /* Propiedades de visualización y posición */
+    display: none; 
+    position: absolute; 
+    min-width: 150px;
+    z-index: 100;
+    }
+    /*ESTILO PARA LOS ENLACES DENTRO DEL SUBMENÚ desplegable */
+    .submenu li a {
+    /* PROPIEDAD CLAVE para la letra blanca */
+      color:white;
+
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+}
+
+/* Estilos para el contenedor del mensaje de bienvenida */
+#mensaje-bienvenida {
+    /* Fondo muy suave para que no compita con el banner */
+    background-color: #045616; /* Gris muy claro, casi blanco */
+    padding: 15px 20px;
+    margin: 20px auto; /* Centra el div y le da espacio arriba/abajo */
+    width: 90%;
+    max-width: 1000px;
+    
+    /* Borde sutil para darle forma */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilos para el texto del saludo (la clase 'saludo') */
+.saludo {
+    color: #e6eff2; /* Texto oscuro, legible */
+    font-size: 1.5em; /* Tamaño de letra grande y prominente */
+    font-weight: bold;
+    margin: 0; /* Elimina el margen por defecto del párrafo */
+    padding: 0;
+}
+/* Estilos para el contenedor del slider */
+.slider-container {
+    max-width: 100%; /* Asegura que no se salga de la página */
+    height: 100vh; /* Puedes ajustar la altura que deseas, vh es altura de la ventana */
+    margin: 0 auto;
+    overflow: hidden; /* Oculta partes de la imagen que se salgan del contenedor */
+    position: relative; /* Necesario para posicionar los botones */
+}
+
+/* Estilo CRUCIAL para que la imagen ocupe todo el espacio del contenedor */
+.slider-image {
+    width: 100%; 
+    height: 100%;
+    object-fit: contain; /* Recorta la imagen para que cubra el contenedor sin distorsionarla */
+    display: block;
+    transition: opacity 1s ease-in-out; /* Para la transición */
+}
+
+/* Estilos de los botones de navegación (flechas) */
+.slider-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5em;
+}
+
+.slider-control.prev {
+    left: 10px;
+}
+
+.slider-control.next {
+    right: 10px;
+}
+/* ------------------------------------------------ */
+/* ------------------------------------------------ */
+/* ESTILOS RESPONSIVOS PARA DISPOSITIVOS MÓVILES (Media Queries) */
+/* ------------------------------------------------ */
+
+/* Media Query para dispositivos pequeños (ancho máximo de 768px)*/
+@media screen and (max-width: 768px) {
+    
+    /* 1. NAVIGACIÓN: Asegura que el menú se apile y sea visible */
+    header nav ul {
+        flex-direction: column; /* Apila los ítems verticalmente */
+        align-items: center; 
+        width: 100%;
+        /* CRÍTICO: Eliminamos display: none; para que el menú sea visible */
+        display: flex; /* Aseguramos que se muestre en modo columna */
+    }
+    
+    header nav ul li {
+        width: 100%; /* Ocupa todo el ancho */
+        text-align: center;
+        margin: 5px 0; /* Ajuste de margen para apilamiento */
+        padding: 10px; /* Reducimos el padding */
+    }
+    
+    /* 2. Reducir el padding del header */
+    header {
+        padding: 10px;
+    }
+
+    /* 3. Ajustar el tamaño del texto principal y banner */
+    .banner-content {
+        font-size: 2.5em; /* Reduce el tamaño de la letra del título */
+    }
+    .banner {
+        height: 400px;
+    }
+    
+    /* 4. SLIDER: Reducir tamaño para móvil */
+    .slider-container {
+        height: 40vh; 
+    }
+    
+    /* 5. MENSAJE DE BIENVENIDA */
+    #mensaje-bienvenida {
+        padding: 10px 5px;
+        font-size: 0.9em;
+    }
+    .saludo {
+        font-size: 1.2em;
+    }
+    
+    /* 6. Botones del Slider */
+    .slider-control {
+        padding: 5px 10px;
+        font-size: 1.2em;
+    }
+}
+
+/* Media Query para dispositivos muy pequeños (ancho máximo de 600px) */
+@media screen and (max-width: 600px) {
+    
+    /*Tarjetas: Hacer que ocupen todo el ancho disponible */
+    .card {
+        width: 90%; 
+        max-width: none;
+    }
+
+    /* Galería: Apilar las dos imágenes una sobre la otra */
+    .two-image-gallery img {
+        width: 90%; 
+    }
+    
+    .banner-content {
+        font-size: 2em; 
+    }
+}
